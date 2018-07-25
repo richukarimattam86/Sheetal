@@ -54,6 +54,11 @@ last_name = "Hemrom"
 para = "Hey {1} , My parents named me  {0} {1} . the story of my last name {1} is that it means {1} is  ".format(first_name , last_name)
 print(para)
 
+first_name = "Sheetal"
+last_name = "Hemrom"
+para = "Hey {1} , My parents named me  {0} {1} . the story of my last name {1} is that it means {1} is  ".format(first_name , last_name)
+#print(para)
+
 
 # printing fibonacci 0,1,1,2,3,5,8,13......
 prevNum = 1
