@@ -100,8 +100,47 @@ def printFibonacci(num):
     num = prevNum + printFibonacci(num)
 
 
+# Arrays in Python
+fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'cherry', 'banana' ]
+
+del fruits[0]
+fruit_at_4 = fruits[4]
+fruits.insert(4,'lemon')
+fruits.append('watermelon')
+print(fruit_at_4)
+print(fruits.index('banana'))
+print(fruits)
+
+popped_fruit = fruits.pop(4)
+print(popped_fruit)
+
+print ("$$$$$$$$$$$$")
+for x in range (len(fruits)):
+    print("The fruit at position {0} is {1}".format(x,fruits[x]))
 
 
+# Sets in Python
+basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+print(basket)
+
+print ("%%%%%%%%%%%%%%")
+for fruit in basket:
+    print("The fruit right now is {0}".format(fruit))
+
+
+# Dictionaries in Python
+
+print ("**************")
+my_dict = {"name":"Sheetal" , "surname" :"Hemrom" , "middlename" : "Swati"}
+surname = my_dict['surname']
+print (surname)
+print (my_dict.keys())
+
+for key in my_dict.keys():
+    print("Hey the value for the key: {0} is {1}".format(key,my_dict[key]))
+
+
+#
 
 
 
@@ -159,23 +198,23 @@ def printFibonacci(num):
 # #taylor.back(20)
 # taylor.setheading(90)
 
-print ("\nPython is awesome" *10)
-
-print (
-    "Mary had a little lamb,",
-    "Little Lamb,",
-    "Little Lamb,",
-    "Its fleece was white as snow."
-)
-
-x = "Mary had a little lamb"
-y = "\nLittle Lamb" *2 # \n is called escape sequence
-z = "\nIts fleece was white as %s." % "snow"
-print (x + y + z)
-
-print ("""
-There is something going on here.
-With the three double quotes.
-We will be able to type as much as we want.
-Even 4 lines, or 5 or 6. """
-)
+# print ("\nPython is awesome" *10)
+#
+# print (
+#     "Mary had a little lamb,",
+#     "Little Lamb,",
+#     "Little Lamb,",
+#     "Its fleece was white as snow."
+# )
+#
+# x = "Mary had a little lamb"
+# y = "\nLittle Lamb" *2 # \n is called escape sequence
+# z = "\nIts fleece was white as %s." % "snow"
+# print (x + y + z)
+#
+# print ("""
+# There is something going on here.
+# With the three double quotes.
+# We will be able to type as much as we want.
+# Even 4 lines, or 5 or 6. """
+# )
