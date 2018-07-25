@@ -55,12 +55,16 @@ def loadScreen():
 
 loadScreen()
 
+print("Sheetal is trying merge conflict")
+
 #Reading input value
 def askEmail():
     value = input('Enter your email id:')
     print("The Email ID %s was entered " %(value))
     print("The Email ID " + value + " was entered")
 
+
+print("Sheetal is trying merge conflict 2222")
 #askEmail()
 
 #Using {} for passing params
