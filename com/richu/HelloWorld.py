@@ -74,6 +74,7 @@ print(para)
 prevNum = 1
 fib = 0
 
+print("I want those changes")
 
 for x in range(10):
    print(fib)
