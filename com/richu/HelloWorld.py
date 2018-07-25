@@ -4,7 +4,7 @@ print ("Hello World")
 import turtle
 import math
 import time
-#import urllib.request
+# import urllib.request
 # import PIL
 # from PIL import Image
 #try:
@@ -37,6 +37,21 @@ def loadScreen():
     loadWindow.bgcolor("red")
     # loadWindow.bgpic("rr.gif")
 
+# def loadScreen():
+#     loadWindow = turtle.Screen()
+#     loadWindow.setup(500,400,0,0)
+#     loadWindow.bgcolor("red")
+#     # loadWindow.bgpic("rr.gif")
+#
+#
+# loadScreen()
+#
+# def askEmail():
+#     value = input('Enter your email id:')
+#     print("The Email ID %s was entered " % (value))
+#     print("The Email ID " + value + " was entered")
+#
+# askEmail()
 
 loadScreen()
 
@@ -53,11 +68,6 @@ first_name = "Sheetal"
 last_name = "Hemrom"
 para = "Hey {1} , My parents named me  {0} {1} . the story of my last name {1} is that it means {1} is  ".format(first_name , last_name)
 print(para)
-
-first_name = "Sheetal"
-last_name = "Hemrom"
-para = "Hey {1} , My parents named me  {0} {1} . the story of my last name {1} is that it means {1} is  ".format(first_name , last_name)
-#print(para)
 
 
 # printing fibonacci 0,1,1,2,3,5,8,13......
@@ -145,7 +155,23 @@ def printFibonacci(num):
 # #taylor.back(20)
 # taylor.setheading(90)
 
+print ("\nPython is awesome" *10)
 
+print (
+    "Mary had a little lamb,",
+    "Little Lamb,",
+    "Little Lamb,",
+    "Its fleece was white as snow."
+)
 
+x = "Mary had a little lamb"
+y = "\nLittle Lamb" *2 # \n is called escape sequence
+z = "\nIts fleece was white as %s." % "snow"
+print (x + y + z)
 
-
+print ("""
+There is something going on here.
+With the three double quotes.
+We will be able to type as much as we want.
+Even 4 lines, or 5 or 6. """
+)
