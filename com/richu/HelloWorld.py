@@ -4,7 +4,7 @@ print ("Hello World")
 import turtle
 import math
 import time
-# import urllib.request
+#import urllib.request
 # import PIL
 # from PIL import Image
 #try:
@@ -30,7 +30,7 @@ from random import shuffle, randrange, choice
 #     img = img.resize((mywidth,hsize), PIL.Image.ANTIALIAS)
 #     img.save('resized.jpg')
 
-
+#loading screem
 def loadScreen():
     loadWindow = turtle.Screen()
     loadWindow.setup(500,400,0,0)
@@ -40,12 +40,54 @@ def loadScreen():
 
 loadScreen()
 
+#Reading input value
 def askEmail():
     value = input('Enter your email id:')
-    print("The Email ID %s was entered " % (value))
+    print("The Email ID %s was entered " %(value))
     print("The Email ID " + value + " was entered")
 
-askEmail()
+#askEmail()
+
+#Using {} for passing params
+first_name = "Sheetal"
+last_name = "Hemrom"
+para = "Hey {1} , My parents named me  {0} {1} . the story of my last name {1} is that it means {1} is  ".format(first_name , last_name)
+print(para)
+
+
+# printing fibonacci 0,1,1,2,3,5,8,13......
+prevNum = 1
+fib = 0
+
+
+for x in range(10):
+   print(fib)
+   temp = fib
+   fib = prevNum + fib
+   prevNum = temp
+
+
+# nested loop
+
+for x in range (10):
+    for y in range (10):
+        print("{0} {1}".format(x,y))
+
+
+
+
+def printFibonacci(num):
+    print(num)
+    num = prevNum + printFibonacci(num)
+
+
+
+
+
+
+
+
+
 
 #loadWindow.bgpic("roof.jpg")
 #loadWindow.bgcolor("#E1AAE1")
