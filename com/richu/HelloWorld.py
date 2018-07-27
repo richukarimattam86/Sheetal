@@ -183,16 +183,6 @@ def askEmail():
 
 print("#############")
 
-#Open a particular image
-from PIL import Image
-image = Image.open('rr.gif')
-image.show()
-
-#Image Properties
-print(image.format)
-print(image.mode)
-print(image.size)
-
 print("#############")
 # Download an image and copy to a specific folder
 import requests
@@ -204,9 +194,18 @@ def getsaveImage():
     with open(file_path, 'wb') as cutedog:
         for chunk in r.iter_content(chunk_size=1024):
             length = cutedog.write(chunk)
+
+#Open a particular image
+from PIL import Image
 image = Image.open('cutedog.jpg')
 image.show()
 
+#Image Properties
+print(image.format)
+print(image.mode)
+print(image.size)
+
+print("Good Morning Sheetal")
 
 # def getImage():
 #     url = "https://cdn4.littlethings.com/app/uploads/2017/05/cute-dog-husky-smiling-600x600.jpg"
