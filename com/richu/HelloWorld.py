@@ -4,9 +4,9 @@ print ("Hello World")
 import turtle
 import math
 import time
-# import urllib.request
-# import PIL
-# from PIL import Image
+import urllib.request
+import PIL
+from PIL import Image
 #try:
 #    from urllib.request import urlretrieve  # Python 3
 #except ImportError:
@@ -30,12 +30,18 @@ from random import shuffle, randrange, choice
 #     img = img.resize((mywidth,hsize), PIL.Image.ANTIALIAS)
 #     img.save('resized.jpg')
 
-#loading screem
+#loading screen
 def loadScreen():
     loadWindow = turtle.Screen()
-    loadWindow.setup(500,400,0,0)
-    loadWindow.bgcolor("red")
-    # loadWindow.bgpic("rr.gif")
+    image = r"C:\Users\richu\IdeaProjects\Python\com\richu\rr.gif"
+    loadWindow.addshape(image)
+    turtle.shape(image)
+    turtle.mainloop()
+    # Finally made this work
+
+    # loadWindow.setup(500,400,0,0)
+    # loadWindow.bgcolor("red")
+    # loadWindow.bgpic('rr.gif)
 
 # def loadScreen():
 #     loadWindow = turtle.Screen()
@@ -44,7 +50,7 @@ def loadScreen():
 #     # loadWindow.bgpic("rr.gif")
 #
 #
-# loadScreen()
+loadScreen()
 #
 # def askEmail():
 #     value = input('Enter your email id:')
@@ -52,8 +58,6 @@ def loadScreen():
 #     print("The Email ID " + value + " was entered")
 #
 # askEmail()
-
-loadScreen()
 
 print("Sheetal is trying merge conflict")
 
@@ -64,48 +68,38 @@ def askEmail():
     print("The Email ID " + value + " was entered")
 
 
-print("Sheetal is trying merge conflict 2222")
+# print("Sheetal is trying merge conflict 2222")
 #askEmail()
 
 #Using {} for passing params
-first_name = "Sheetal"
-last_name = "Hemrom"
-para = "Hey {1} , My parents named me  {0} {1} . the story of my last name {1} is that it means {1} is  ".format(first_name , last_name)
-print(para)
+# first_name = "Sheetal"
+# last_name = "Hemrom"
+# para = "Hey {1} , My parents named me  {0} {1} . the story of my last name {1} is that it means {1} is  ".format(first_name , last_name)
+# # print(para)
 
 
 # printing fibonacci 0,1,1,2,3,5,8,13......
-prevNum = 1
-fib = 0
+# prevNum = 1
+# fib = 0
 
-print("I want those changes")
+# print("I want those changes")
 
-for x in range(10):
-   print(fib)
-   temp = fib
-   fib = prevNum + fib
-   prevNum = temp
+# for x in range(10):
+#    print(fib)
+#    temp = fib
+#    fib = prevNum + fib
+#    prevNum = temp
 
 
 # nested loop
 
-for x in range (10):
-    for y in range (10):
-        print("{0} {1}".format(x,y))
+# for x in range (10):
+#     for y in range (10):
+        # print("{0} {1}".format(x,y))
 
-
-
-
-def printFibonacci(num):
-    print(num)
-    num = prevNum + printFibonacci(num)
-
-
-
-
-
-
-
+# def printFibonacci(num):
+#     print(num)
+#     num = prevNum + printFibonacci(num)
 
 
 
@@ -160,23 +154,69 @@ def printFibonacci(num):
 # #taylor.back(20)
 # taylor.setheading(90)
 
-print ("\nPython is awesome" *10)
+# print ("\nPython is awesome" *5)
 
-print (
-    "Mary had a little lamb,",
-    "Little Lamb,",
-    "Little Lamb,",
-    "Its fleece was white as snow."
-)
+# # print (
+#     "Mary had a little lamb,",
+#     "Little Lamb,",
+#     "Little Lamb,",
+#     "Its fleece was white as snow."
+# )
 
-x = "Mary had a little lamb"
-y = "\nLittle Lamb" *2 # \n is called escape sequence
-z = "\nIts fleece was white as %s." % "snow"
-print (x + y + z)
+# x = "Mary had a little lamb"
+# y = "\nLittle Lamb" *2 # \n is called escape sequence
+# z = "\nIts fleece was white as %s." % "snow"
+# # print (x + y + z)
 
-print ("""
-There is something going on here.
-With the three double quotes.
-We will be able to type as much as we want.
-Even 4 lines, or 5 or 6. """
-)
+# print ("""
+# There is something going on here.
+# With the three double quotes.
+# We will be able to type as much as we want.
+# Even 4 lines, or 5 or 6. """
+# )
+
+# age = input("How old are you: ")
+# height = input("How tall are you: ")
+# weight = input("How much do you weigh: ")
+# print(" You are {0} old, {1} in height, and {2} in weight.".format(age, height, weight))
+# print(" You are %r old, %r in height, and %r in weight." %(age, height, weight))
+
+print("#############")
+
+#Open a particular image
+from PIL import Image
+image = Image.open('rr.gif')
+image.show()
+
+#Image Properties
+print(image.format)
+print(image.mode)
+print(image.size)
+
+print("#############")
+# Download an image and copy to a specific folder
+import requests
+def getsaveImage():
+    image_url = "https://cdn4.littlethings.com/app/uploads/2017/05/cute-dog-husky-smiling-600x600.jpg"
+    file_path = r'c:\Users\richu\Desktop\Resume\richu\cutedog'
+    # resource = urllib.urlretriece(src, 'location/on/my/system/foo.png')
+    resource = requests.get(image_url, stream=True)
+    with open(file_path, 'wb') as cutedog:
+        for chunk in r.iter_content(chunk_size=1024):
+            length = cutedog.write(chunk)
+image = Image.open('cutedog.jpg')
+image.show()
+
+
+# def getImage():
+#     url = "https://cdn4.littlethings.com/app/uploads/2017/05/cute-dog-husky-smiling-600x600.jpg"
+#     resource = urllib.request.urlopen(url)
+#     output = open("cutedog.jpg","wb")
+#     output.write(resource.read())
+#     output.close()
+#     # urlretrieve(url, "cutedog.jpg")
+#     # loadWindow.bgpic("cutedog")
+#     turtle.shape(url)
+#     turtle.mainloop()
+#
+# getImage()
